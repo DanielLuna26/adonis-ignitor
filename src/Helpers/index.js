@@ -187,6 +187,24 @@ class Helpers {
   }
 
   /**
+   * Returns path to the storage directory or a
+   * specific file to the storage directory.
+   *
+   * ## Note
+   * This method does not check the existence of
+   * file.
+   *
+   * @method storagePath
+   *
+   * @param  {String}   [toFile = '']
+   *
+   * @return {String}
+   */
+  storagePath (toFile = '') {
+    return path.join(this._appRoot, '/storage', toFile)
+  }
+
+  /**
    * Promisify callback style functions
    *
    * @method promisify
